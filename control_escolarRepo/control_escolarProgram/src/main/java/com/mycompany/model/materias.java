@@ -8,6 +8,6 @@ package com.mycompany.model;
  *
  * @author Mati
  */
-public class materias {
+public class Materias {
     
 }

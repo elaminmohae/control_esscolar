@@ -8,6 +8,6 @@ package com.mycompany.model;
  *
  * @author Mati
  */
-public class cursar {
+public class Cursar {
     
 }

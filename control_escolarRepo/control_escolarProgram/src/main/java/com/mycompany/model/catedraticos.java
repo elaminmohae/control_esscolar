@@ -8,14 +8,14 @@ package com.mycompany.model;
  *
  * @author Mati
  */
-public class catedraticos {
+public class Catedraticos {
     private int id;
     private String nombre;
 
-    public catedraticos() {
+    public Catedraticos() {
     }
 
-    public catedraticos(int id, String nombre) {
+    public Catedraticos(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
@@ -26,6 +26,11 @@ public class catedraticos {
 
     public String getNombre() {
         return nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Catedraticos{" + "id=" + id + ", nombre=" + nombre + '}';
     }
     
     
