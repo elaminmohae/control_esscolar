@@ -7,26 +7,37 @@ import java.util.Scanner;
 
 public class Control_escolarProgram {
 
+    private static Scanner scan = new Scanner(System.in);
+    
     public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
         int opciones = 0;
-        Connect connect = new Connect();
-        connect.startConnection();
+        //Connect connect = new Connect();
+        //connect.startConnection();
         
-        GestorCarreras gestorCarreras = new GestorCarreras();
-        gestorCarreras.menuCarreras();
+        menuPrincipal();
         opciones = scan.nextInt();
-        gestorCarreras.eleccionesMenu(opciones);
+        eleccionPrincipal(opciones);
               
     }
     
-    public void menuPrincipal(){
+    public static void menuPrincipal(){
         System.out.println("1.- Carreras");
-        System.out.println("2.- Carreras");
-        System.out.println("3.- Carreras");
-        System.out.println("4.- Carreras");
-        System.out.println("5.- Carreras");
-        System.out.println("6.- Carreras");
+        System.out.println("2.- Alumnos");
+        System.out.println("3.- Calificaciones");
+        System.out.println("4.- Catedraticos");
+        System.out.println("5.- Materias");
+        System.out.println("6.- Semestres");
+    }
+    
+    public static void eleccionPrincipal(int opcion){
+        switch(opcion){
+            case 1:
+                GestorCarreras gestorCarreras = new GestorCarreras();
+                gestorCarreras.menuCarreras();
+                opcion = scan.nextInt();
+                gestorCarreras.eleccionesCarreras(opcion);
+                break;
+        }
     }
 }
